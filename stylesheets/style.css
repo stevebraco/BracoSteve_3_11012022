@@ -47,4 +47,53 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  position: relative;
+}
+.header__wrapper {
+  width: 165px;
+  padding-top: 0.8rem;
+}
+.header__back {
+  position: absolute;
+  left: 6%;
+  top: 23px;
+  font-size: 1.2rem;
+}
+.header__link {
+  color: black;
+}
+
+.footer {
+  background: #353535;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 1.4rem 1.5rem 1.8rem;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.13rem;
+  color: #fff;
+  margin-bottom: 0.85rem;
+}
+.footer__link {
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+.footer__icon {
+  padding-right: 0.75rem;
+  font-size: 0.85rem;
+}
+
 /*# sourceMappingURL=style.css.map */

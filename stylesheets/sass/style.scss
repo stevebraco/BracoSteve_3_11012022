@@ -7,3 +7,63 @@ body {
   font-family: $fontsText;
 }
 
+a {
+  text-decoration: none;
+}
+
+
+// HEADER
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  position: relative;
+
+  &__wrapper {
+    width: 165px;
+    padding-top: .8rem;
+  }
+
+  &__back {
+    position: absolute;
+    left: 6%;
+    top: 23px;
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    color: black;
+  }
+}
+
+// FOOTER
+.footer {
+  background: #353535;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 1.4rem 1.5rem 1.8rem;
+  }
+  
+  &__logo {
+    font-family: $fontsLogoTitle;
+    font-size: 1.13rem;
+    color: #fff;
+    margin-bottom: .85rem;
+  }
+  
+  &__link {
+    color: #fff;
+    margin-bottom: .35rem;
+  }
+
+  &__icon {
+    padding-right: .75rem;
+    font-size: .85rem;
+  }
+}
+
+
+
