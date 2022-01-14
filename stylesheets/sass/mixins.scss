@@ -1,0 +1,23 @@
+@mixin circleNumber($number) {
+  content: $number;
+  position: absolute;
+  left: -12px;
+  top: 27px;
+  font-size: 0.8rem;
+  color: #fff;
+  background: $colorPrimary;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.2rem;
+  font-size: 14px;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
