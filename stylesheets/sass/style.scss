@@ -63,6 +63,7 @@ a {
   @include flexCenter;
   height: 4rem;
   position: relative;
+  box-shadow: $boxShadow;
 
   &__wrapper {
     width: 165px;
@@ -337,7 +338,7 @@ a {
   }
 
   &__description {
-    max-width: 268px;
+    max-width: 272px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;  }
