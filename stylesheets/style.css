@@ -61,10 +61,15 @@ h2 {
 h3 {
   font-size: 1.13rem;
   font-weight: bold;
+  color: #000000;
 }
 
 a {
   text-decoration: none;
+}
+
+.menu-bg {
+  background: #F6F6F6;
 }
 
 .btn {
@@ -75,6 +80,14 @@ a {
   padding: 1rem 1.3rem;
   display: inline-block;
   border-radius: 25px;
+  box-shadow: 0px 6px 20px 1px lightgrey;
+}
+.btn__wrapper {
+  text-align: center;
+}
+
+.btn--large {
+  padding: 1rem 3rem;
 }
 
 .icon-heart {
@@ -291,6 +304,89 @@ a {
   display: block;
   padding-top: 0.4rem;
   font-size: 1.05rem;
+  color: #000000;
+}
+
+.dish__figure {
+  position: relative;
+  height: 253px;
+}
+.dish__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  background: #F6F6F6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-top: 2rem;
+  transform: translateY(-35px);
+}
+.menu__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.3rem 1.8rem 1.2rem;
+}
+.menu__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+  padding: initial;
+}
+
+.menu-card {
+  padding: 0px 0.7rem 2rem 0.9rem;
+}
+.menu-card__heading {
+  position: relative;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-left: 0.4rem;
+  padding-bottom: 0.5rem;
+}
+.menu-card__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+}
+.menu-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 0.9rem;
+}
+.menu-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: #fff;
+  padding: 0.9rem 1.5rem 0.9rem 0.7rem;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px 1px lightgrey;
+}
+.menu-card__title {
+  font-size: 1.11rem;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+  white-space: break-spaces;
+}
+.menu-card__description {
+  max-width: 268px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-card__ingredients {
+  font-size: 0.92rem;
+}
+.menu-card__price {
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
