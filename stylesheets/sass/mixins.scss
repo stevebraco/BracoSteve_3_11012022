@@ -21,3 +21,12 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin animateFade($delay) {
+  animation: fadeIn 1s both $delay;
+}

@@ -1,5 +1,6 @@
 // GOOGLE FONTS
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+
 $fontsLogoTitle: 'Shrikhand', cursive;
 $fontsText: 'Roboto', sans-serif;
 
@@ -8,4 +9,9 @@ $colorPrimary: #9356DC;
 $colorSecondary: #FF79DA;
 $colorTertiary: #99E2D0;
 
+// MEDIA QUERIES
+$tabletScreen: 768px;
+$desktopScreen: 1024px;
+
 $boxShadow: 0px 6px 20px 1px lightgrey;
+$linearGradient: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);

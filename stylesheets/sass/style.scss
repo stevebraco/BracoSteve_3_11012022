@@ -9,38 +9,78 @@ body {
 
 h1 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   padding-left: 1.3rem;
 }
 
 h3 {
   font-size: 1.13rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
+
 a {
   text-decoration: none;
 }
 
+a:active {
+  color: #000000;
+}
+
+
+  
 .menu-bg {
   background: #F6F6F6;
 }
 
+// LOADER
+.loader {
+  @include flexCenter;
+  background: rgba(215, 215, 215, 0.817);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: loading .01s forwards 2s;
+
+  &__title {
+    font-family: $fontsLogoTitle;
+    font-size: 3rem;
+  }
+
+  &__spinning {
+  border : 1rem solid $colorPrimary;
+  border-top : 1rem solid $colorTertiary;
+  border-bottom : 1rem solid $colorSecondary;
+  border-radius : 50%;
+  animation: rotation 2s infinite linear;
+  }
+}
+
+
+
+
 // BUTTON
 .btn {
   font-size: 1rem;
-  font-weight: bold;
-  background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+  font-weight: 700;
+  background: $linearGradient;
   color: #fff;
   padding: 1rem 1.3rem;
   display: inline-block;
   border-radius: 25px;
   box-shadow: $boxShadow;
+  transition: .5s;
+
+  &:hover {
+    opacity: .8;
+    box-shadow: 0px 6px 20px 1px black;
+  }
 
   &__wrapper {
     text-align: center;
@@ -49,13 +89,36 @@ a {
 
 .btn--large {
   padding: 1rem 3rem;
-
 }
 
 // ICON HEART 
-.icon-heart {
-  font-size: 1.5rem;
-  padding-top: 0.3rem;  
+.heart {
+  &__wrapper {
+    position: relative;
+    font-size: 1.5rem;
+    padding-top: 0.3rem;
+
+    &:hover .heart__full {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: #000000;
+  }
+  
+  &__full {
+    background: $linearGradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    opacity: 0;
+    transition: .5s;
+
+  }
 }
 
 // HEADER
@@ -69,7 +132,7 @@ a {
     width: 165px;
     padding-top: .8rem;
   }
-
+  // arrow menu
   &__back {
     position: absolute;
     left: 6%;
@@ -129,6 +192,7 @@ a {
 .explore {
   padding: 2.5rem 0 3.5rem;
   background-color: #F6F6F6;
+
   &__container {
     text-align: center;
     padding-left: .5rem;
@@ -149,6 +213,7 @@ a {
 }
 
 .fonctionnement {
+  
   &__container {
     padding: 3rem 0rem;
   }
@@ -195,9 +260,7 @@ a {
     color: #7E7E7E;
   }
 }
-// .fonctionnement__item:hover .fonctionnement__icon {
-//   color: red;
-// }
+
 // RESTAURANT
 .restaurant {
 
@@ -234,7 +297,7 @@ a {
     background: $colorTertiary;
     color: #1E997A;
     height: 29px;
-    font-weight: bold;
+    font-weight: 700;
     font-size: .9rem;
     padding: 0rem 0.7rem;
   }
@@ -246,8 +309,7 @@ a {
   }
 
   &__description {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     padding: 1rem 1.5rem 1rem 0.8rem;
   }
 
@@ -281,8 +343,7 @@ a {
   transform: translateY(-35px);
 
   &__title-wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     padding: 0 2.3rem 1.8rem 1.2rem;
   }
 
@@ -295,7 +356,7 @@ a {
 
 .menu-card {
   padding: 0px 0.7rem 2rem 0.9rem;
-
+  
   &__heading {
     position: relative;
     font-weight: 300;
@@ -312,49 +373,120 @@ a {
       background: $colorTertiary;
     }
   }
-
+  
   &__list {
     display: flex;
     flex-direction: column;
     gap: .65rem;
     padding-top: .9rem;
   }
-
+  
   &__item {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    @include flexBetween;
     align-items: flex-end;
     background: #fff;
     padding: 0.9rem 1.5rem 0.9rem 0.7rem;
     border-radius: 15px;
     box-shadow: $boxShadow;
+    overflow: hidden;
   }
 
   &__title {
     font-size: 1.11rem;
-    font-weight: bold;
+    font-weight: 700;
     padding-bottom: 0.2rem;
     white-space: break-spaces;
   }
 
   &__description {
-    max-width: 272px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;  }
+    text-overflow: ellipsis;  
+  }
 
   &__ingredients {
     font-size: 0.92rem;
-    // white-space: nowrap;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
   }
 
   &__price {
     font-size: .85rem;
-    font-weight: bold;
+    font-weight: 700;
+    transition: .5s;
+  }
+
+   &__check {
+     @include flexCenter;
+     position: absolute;
+     top: 0;
+     right: -5rem;
+     background: $colorTertiary;
+     color: #fff;
+     width: 60px;
+     height: 100%;
+     font-size: 1.4rem;
+     transition: .7s;
+   }
+
+   &__circle {
+    transition: .7s ease-in-out;
+  }
+
+  &__item:hover .menu-card__price {
+    margin-right: 60px;
+    padding-left: 1px;
+  }
+  &__item:hover .menu-card__check {
+    right: 0;
+  }
+  &__item:hover .menu-card__circle {
+    transform: rotate(360deg);
   }
 }
 
+// FADE IN
+.fadeIn1 {
+  @include animateFade(.3s);
+}
 
+.fadeIn2 {
+  @include animateFade(.5s);
+}
 
+.fadeIn3 {
+  @include animateFade(.7s);
+}
+
+.fadeIn4 {
+  @include animateFade(.9s);
+}
+
+// KEYFRAMES
+@keyframes rotation {
+  from {
+     transform: rotate(0deg);
+  }
+  to {
+     transform: rotate(359deg);
+  }
+}
+
+  @keyframes loading {
+    100% {
+      opacity: 0;
+      z-index: -10;   
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+@import './mediaqueries.scss';

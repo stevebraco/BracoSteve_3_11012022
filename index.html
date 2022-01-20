@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <!-- LOADER -->
+  <div class="loader">
+    <div class="loader__spinning"></div>
+    <div class="loader__title">ohmyfood</div>
+    <div class="loader__spinning"></div>
+  </div>
   <!-- HEADER -->
   <header class="header">
     <div class="header__wrapper">
@@ -19,7 +25,7 @@
     </div>
   </header>
   <!-- MAIN -->
-  <main>
+  <main class="max-container">
     <!-- LOCATION -->
     <div class="location">
       <span class="location__icon">
@@ -66,7 +72,7 @@
       <div class="restaurant__container">
         <h2>Restaurants</h2>
         <div class="restaurant__card-list">
-          <a href="/menuPalette.html">
+          <a class="card__link" href="/menuPalette.html">
             <article class="card">
               <div class="card__figure">
                 <span class="card__new">Nouveau</span>
@@ -78,11 +84,14 @@
                   <h3>La palette du goût</h3>
                   <span class='card__location'>Ménilmontant</span>
                 </div>
-                <span class="icon-heart"><i class="fal fa-heart"></i></span>
+                <span class="heart__wrapper">
+                  <i class="heart__icon heart__empty fal fa-heart"></i>
+                  <i class="heart__icon heart__full fas fa-heart"></i>
+                </span>
               </div>
             </article>
           </a>
-          <a href="/menuEnchantee.html">
+          <a class="card__link" href="/menuEnchantee.html">
             <article class="card">
               <div class="card__figure">
                 <span class="card__new">Nouveau</span>
@@ -93,11 +102,14 @@
                   <h3>La note enchantée</h3>
                   <span class='card__location'>Charonne</span>
                 </div>
-                <span class="icon-heart"><i class="fal fa-heart"></i></span>
+                <span class="heart__wrapper">
+                  <i class="heart__icon heart__empty fal fa-heart"></i>
+                  <i class="heart__icon heart__full fas fa-heart"></i>
+                </span>
               </div>
             </article>
           </a>
-          <a href="/menuFrancaise.html">
+          <a class="card__link" href="/menuFrancaise.html">
             <article class="card">
               <div class="card__figure">
                 <span class="card__new">Nouveau</span>
@@ -109,11 +121,14 @@
                   <h3>À la française</h3>
                   <span class='card__location'>Cité Rouge</span>
                 </div>
-                <span class="icon-heart"><i class="fal fa-heart"></i></span>
+                <span class="heart__wrapper">
+                  <i class="heart__icon heart__empty fal fa-heart"></i>
+                  <i class="heart__icon heart__full fas fa-heart"></i>
+                </span>
               </div>
             </article>
           </a>
-          <a href="/menuDelice.html">
+          <a class="card__link" href="/menuDelice.html">
             <article class="card">
               <div class="card__figure">
                 <span class="card__new">Nouveau</span>
@@ -125,7 +140,10 @@
                   <h3>Le délice des sens</h3>
                   <span class='card__location'>Folie-Méricourt</span>
                 </div>
-                <span class="icon-heart"><i class="fal fa-heart"></i></span>
+                <span class="heart__wrapper">
+                  <i class="heart__icon heart__empty fal fa-heart"></i>
+                  <i class="heart__icon heart__full fas fa-heart"></i>
+                </span>
               </div>
             </article>
           </a>
