@@ -422,16 +422,17 @@ a:active {
   box-shadow: 0px 6px 20px 1px lightgrey;
   overflow: hidden;
 }
-.menu-card__title {
-  font-size: 1.11rem;
-  font-weight: 700;
-  padding-bottom: 0.2rem;
-  white-space: break-spaces;
-}
 .menu-card__description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.menu-card__title {
+  font-size: 1.11rem;
+  font-weight: 700;
+  padding-bottom: 0.2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-card__ingredients {
   font-size: 0.92rem;
@@ -440,6 +441,7 @@ a:active {
   font-size: 0.85rem;
   font-weight: 700;
   transition: 0.5s;
+  padding-left: 1rem;
 }
 .menu-card__check {
   display: flex;
@@ -460,7 +462,6 @@ a:active {
 }
 .menu-card__item:hover .menu-card__price {
   margin-right: 60px;
-  padding-left: 1px;
 }
 .menu-card__item:hover .menu-card__check {
   right: 0;
@@ -507,11 +508,6 @@ a:active {
   to {
     opacity: 1;
     transform: translateY(0%);
-  }
-}
-@media screen and (max-width: 420px) {
-  .menu-card__description {
-    max-width: 272px;
   }
 }
 @media screen and (min-width: 768px) {

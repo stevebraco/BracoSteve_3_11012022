@@ -392,18 +392,21 @@ a:active {
     overflow: hidden;
   }
 
-  &__title {
-    font-size: 1.11rem;
-    font-weight: 700;
-    padding-bottom: 0.2rem;
-    white-space: break-spaces;
-  }
-
   &__description {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;  
   }
+  
+  &__title {
+    font-size: 1.11rem;
+    font-weight: 700;
+    padding-bottom: 0.2rem;
+    text-overflow: ellipsis;  
+    overflow: hidden;
+
+  }
+
 
   &__ingredients {
     font-size: 0.92rem;
@@ -413,6 +416,7 @@ a:active {
     font-size: .85rem;
     font-weight: 700;
     transition: .5s;
+    padding-left: 1rem
   }
 
    &__check {
@@ -434,7 +438,6 @@ a:active {
 
   &__item:hover .menu-card__price {
     margin-right: 60px;
-    padding-left: 1px;
   }
   &__item:hover .menu-card__check {
     right: 0;
