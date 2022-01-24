@@ -76,33 +76,10 @@ a:active {
   background: #F6F6F6;
 }
 
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(215, 215, 215, 0.817);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  animation: loading 0.01s forwards 2s;
-}
-.loader__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 3rem;
-}
-.loader__spinning {
-  border: 1rem solid #9356DC;
-  border-top: 1rem solid #99E2D0;
-  border-bottom: 1rem solid #FF79DA;
-  border-radius: 50%;
-  animation: rotation 2s infinite linear;
-}
-
 .btn {
   font-size: 1rem;
   font-weight: 700;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: #fff;
   padding: 1rem 1.3rem;
   display: inline-block;
@@ -137,12 +114,35 @@ a:active {
   color: #000000;
 }
 .heart__full {
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: 0.5s;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(215, 215, 215, 0.817);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: loading 0.01s forwards 2s;
+}
+.loader__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 3rem;
+}
+.loader__spinning {
+  border: 1rem solid #9356DC;
+  border-top: 1rem solid #99E2D0;
+  border-bottom: 1rem solid #FF79DA;
+  border-radius: 50%;
+  animation: rotation 2s infinite linear;
 }
 
 .header {
@@ -494,7 +494,7 @@ a:active {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes loading {

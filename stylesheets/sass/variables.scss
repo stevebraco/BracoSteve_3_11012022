@@ -14,4 +14,4 @@ $tabletScreen: 768px;
 $desktopScreen: 1024px;
 
 $boxShadow: 0px 6px 20px 1px lightgrey;
-$linearGradient: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+$linearGradient: linear-gradient(180deg, $colorSecondary 0%, $colorPrimary 100%);
