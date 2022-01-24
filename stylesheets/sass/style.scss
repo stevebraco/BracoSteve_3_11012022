@@ -397,6 +397,10 @@ a:active {
     overflow: hidden;
     text-overflow: ellipsis;  
   }
+
+  &__break-line {
+    display: block;
+  }
   
   &__title {
     font-size: 1.11rem;
@@ -404,9 +408,7 @@ a:active {
     padding-bottom: 0.2rem;
     text-overflow: ellipsis;  
     overflow: hidden;
-
   }
-
 
   &__ingredients {
     font-size: 0.92rem;

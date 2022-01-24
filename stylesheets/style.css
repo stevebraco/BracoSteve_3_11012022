@@ -427,6 +427,9 @@ a:active {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu-card__break-line {
+  display: block;
+}
 .menu-card__title {
   font-size: 1.11rem;
   font-weight: 700;
