@@ -95,6 +95,7 @@ a:active {
 // LOADER
 .loader {
   @include flexCenter;
+  gap: .3rem;
   background: rgba(215, 215, 215, 0.817);
   position: fixed;
   width: 100%;
@@ -108,9 +109,9 @@ a:active {
   }
 
   &__spinning {
-  border : 1rem solid $colorPrimary;
-  border-top : 1rem solid $colorTertiary;
-  border-bottom : 1rem solid $colorSecondary;
+  border : 1.5rem solid $colorPrimary;
+  border-top : 1.5rem solid $colorTertiary;
+  border-bottom : 1.5rem solid $colorSecondary;
   border-radius : 50%;
   animation: rotation 2s infinite linear;
   }
@@ -276,6 +277,7 @@ a:active {
   box-shadow: $boxShadow;
   border-radius: 1rem;
   overflow: hidden;
+  flex: 1;
 
   &__figure {
     position: relative;

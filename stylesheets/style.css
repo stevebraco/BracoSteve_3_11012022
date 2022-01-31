@@ -19,6 +19,7 @@ button, input, select {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -126,6 +127,7 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.3rem;
   background: rgba(215, 215, 215, 0.817);
   position: fixed;
   width: 100%;
@@ -138,9 +140,9 @@ a:active {
   font-size: 3rem;
 }
 .loader__spinning {
-  border: 1rem solid #9356DC;
-  border-top: 1rem solid #99E2D0;
-  border-bottom: 1rem solid #FF79DA;
+  border: 1.5rem solid #9356DC;
+  border-top: 1.5rem solid #99E2D0;
+  border-bottom: 1.5rem solid #FF79DA;
   border-radius: 50%;
   animation: rotation 2s infinite linear;
 }
@@ -320,6 +322,7 @@ a:active {
   box-shadow: 0px 6px 20px 1px lightgrey;
   border-radius: 1rem;
   overflow: hidden;
+  flex: 1;
 }
 .card__figure {
   position: relative;
