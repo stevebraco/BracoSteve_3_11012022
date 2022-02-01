@@ -522,7 +522,7 @@ a:active {
     max-width: initial;
   }
 
-  .card__link {
+  .card {
     flex: 47%;
   }
 
@@ -562,7 +562,7 @@ a:active {
     padding-bottom: 2rem;
   }
 
-  .card__link {
+  .card {
     flex: 1;
   }
 
